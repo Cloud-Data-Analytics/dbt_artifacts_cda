@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: tests
-    description: Base model for metadata about test executions. One row per node per run.
+    description: Modelo base sobre testes. Uma linha por execução de nó.
     columns:
       - name: command_invocation_id
         description: '{{ doc("command_invocation_id") }}'

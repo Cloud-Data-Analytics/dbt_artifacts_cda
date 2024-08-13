@@ -23,18 +23,18 @@ The package currently supports
 Models included:
 
 ```
-dim_dbt__current_models
-dim_dbt__exposures
-dim_dbt__models
-dim_dbt__seeds
-dim_dbt__snapshots
-dim_dbt__sources
-dim_dbt__tests
-fct_dbt__invocations
-fct_dbt__model_executions
-fct_dbt__seed_executions
-fct_dbt__snapshot_executions
-fct_dbt__test_executions
+dim_dbt_current_models
+dim_dbt_exposures
+dim_dbt_models
+dim_dbt_seeds
+dim_dbt_snapshots
+dim_dbt_sources
+dim_dbt_tests
+fct_dbt_invocations
+fct_dbt_model_executions
+fct_dbt_seed_executions
+fct_dbt_snapshot_executions
+fct_dbt_test_executions
 ```
 
 See the generated [dbt docs site](https://brooklyn-data.github.io/dbt_artifacts/#!/overview) for documentation on each model.
@@ -110,7 +110,7 @@ Note that model materializations and `on_schema_change` configs are defined in t
 
 ### Environment Variables
 
-If the project is running in dbt Cloud, the following five columns (<https://docs.getdbt.com/docs/dbt-cloud/using-dbt-cloud/cloud-environment-variables#special-environment-variables>) will be automatically populated in the fct_dbt__invocations model:
+If the project is running in dbt Cloud, the following five columns (<https://docs.getdbt.com/docs/dbt-cloud/using-dbt-cloud/cloud-environment-variables#special-environment-variables>) will be automatically populated in the fct_dbt_invocations model:
 
 - dbt_cloud_project_id
 - dbt_cloud_job_id
@@ -118,7 +118,7 @@ If the project is running in dbt Cloud, the following five columns (<https://doc
 - dbt_cloud_run_reason_category
 - dbt_cloud_run_reason
 
-To capture other environment variables in the fct_dbt__invocations model in the `env_vars` column, add them to the `env_vars` variable in your `dbt_project.yml`. Note that environment variables with secrets (`DBT_ENV_SECRET_`) can't be logged.
+To capture other environment variables in the fct_dbt_invocations model in the `env_vars` column, add them to the `env_vars` variable in your `dbt_project.yml`. Note that environment variables with secrets (`DBT_ENV_SECRET_`) can't be logged.
 
 ```yml
 vars:
@@ -131,7 +131,7 @@ vars:
 
 ### dbt Variables
 
-To capture dbt variables in the fct_dbt__invocations model in the `dbt_vars` column, add them to the `dbt_vars` variable in your `dbt_project.yml`.
+To capture dbt variables in the fct_dbt_invocations model in the `dbt_vars` column, add them to the `dbt_vars` variable in your `dbt_project.yml`.
 
 ```yml
 vars:

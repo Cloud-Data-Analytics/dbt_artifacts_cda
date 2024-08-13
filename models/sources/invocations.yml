@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: invocations
-    description: Base model for data about the invocations of dbt. One row per run.
+    description: Modelo base sobre invocações do DBT. Uma linha por execução de nó.
     columns:
       - name: command_invocation_id
         description: '{{ doc("command_invocation_id") }}'
