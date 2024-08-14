@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: seed_executions
-    description: Base model for data about seed executions. One row per seed execution.
+    description: Modelo base sobre execução de seeds. Uma linha por execução de nó.
     columns:
       - name: command_invocation_id
         description: '{{ doc("command_invocation_id") }}'

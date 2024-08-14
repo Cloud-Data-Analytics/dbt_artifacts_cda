@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: models
-    description: Staging model that contains metadata about model executions. One row per node per run.
+    description: Modelo base sobre modelos. Uma linha por execução de nó.
     columns:
       - name: command_invocation_id
         description: '{{ doc("command_invocation_id") }}'

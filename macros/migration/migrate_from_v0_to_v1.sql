@@ -30,7 +30,7 @@
             total_node_runtime,
             was_full_refresh,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.fct_dbt__model_executions
+        from {{old_database}}.{{old_schema}}.fct_dbt_model_executions
     {% endset %}
 
     {{ log("Migrating model_executions", info=True) }}
@@ -58,7 +58,7 @@
             [],
             test_path,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.dim_dbt__tests
+        from {{old_database}}.{{old_schema}}.dim_dbt_tests
     {% endset %}
 
     {{ log("Migrating tests", info=True) }}
@@ -92,7 +92,7 @@
             total_node_runtime,
             was_full_refresh,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.fct_dbt__test_executions
+        from {{old_database}}.{{old_schema}}.fct_dbt_test_executions
     {% endset %}
 
     {{ log("Migrating test_executions", info=True) }}
@@ -126,7 +126,7 @@
             model_path,
             model_schema,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.dim_dbt__models
+        from {{old_database}}.{{old_schema}}.dim_dbt_models
     {% endset %}
 
     {{ log("Migrating models", info=True) }}
@@ -156,7 +156,7 @@
             seed_path,
             seed_schema,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.dim_dbt__seeds
+        from {{old_database}}.{{old_schema}}.dim_dbt_seeds
     {% endset %}
 
     {{ log("Migrating seeds", info=True) }}
@@ -194,7 +194,7 @@
             total_node_runtime,
             was_full_refresh,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.fct_dbt__seed_executions
+        from {{old_database}}.{{old_schema}}.fct_dbt_seed_executions
     {% endset %}
 
     {{ log("Migrating seed_executions", info=True) }}
@@ -230,7 +230,7 @@
             any_value(type) as type,
             null,
             any_value(artifact_generated_at) as artifact_generated_at
-        from {{old_database}}.{{old_schema}}.dim_dbt__exposures
+        from {{old_database}}.{{old_schema}}.dim_dbt_exposures
         group by command_invocation_id, node_id, name, artifact_generated_at
     {% endset %}
 
@@ -265,7 +265,7 @@
             snapshot_schema,
             null,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.dim_dbt__snapshots
+        from {{old_database}}.{{old_schema}}.dim_dbt_snapshots
     {% endset %}
 
     {{ log("Migrating snapshots", info=True) }}
@@ -303,7 +303,7 @@
             total_node_runtime,
             was_full_refresh,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.fct_dbt__snapshot_executions
+        from {{old_database}}.{{old_schema}}.fct_dbt_snapshot_executions
     {% endset %}
 
     {{ log("Migrating snapshot_executions", info=True) }}
@@ -337,7 +337,7 @@
             source_schema,
             source_name,
             artifact_generated_at
-        from {{old_database}}.{{old_schema}}.dim_dbt__sources
+        from {{old_database}}.{{old_schema}}.dim_dbt_sources
     {% endset %}
 
     {{ log("Migrating sources", info=True) }}

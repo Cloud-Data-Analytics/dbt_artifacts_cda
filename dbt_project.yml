@@ -12,11 +12,18 @@ clean-targets: # folders to be removed by `dbt clean`
 models:
   dbt_artifacts:
     +materialized: view
-    +file_format: delta
+    +file_format: iceberg
     sources:
+      +schema: "landing_{{target.name}}"
       +materialized: incremental
       +on_schema_change: append_new_columns
       +full_refresh: false
       +persist_docs:
         # Databricks doesn't offer column-level support for persisting docs
         columns: '{{ target.name != "databricks" }}'
+    staging:
+      +schema: "bronze_{{target.name}}"
+    facts:
+      +schema: "silver_{{target.name}}"
+    dimension:
+      +schema: "silver_{{target.name}}"      

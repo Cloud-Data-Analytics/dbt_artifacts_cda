@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: model_executions
-    description: Base model for data about model executions. One row per model execution.
+    description: Modelo base sobre execuções de modelos. Uma linha por execução de nó.
     columns:
       - name: command_invocation_id
         description: '{{ doc("command_invocation_id") }}'
