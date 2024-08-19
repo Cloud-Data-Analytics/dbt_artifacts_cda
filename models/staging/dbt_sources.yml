@@ -28,3 +28,5 @@ models:
     description: '{{ doc("source_execution_id") }}'
   - name: source_name
     description: '{{ doc("source_name") }}'
+  config:
+    group: Cloud Data Analytics

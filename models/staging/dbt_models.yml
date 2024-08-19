@@ -34,3 +34,5 @@ models:
     description: '{{ doc("tags") }}'
   - name: meta
     description: '{{ doc("meta") }}'
+  config:
+    group: Cloud Data Analytics

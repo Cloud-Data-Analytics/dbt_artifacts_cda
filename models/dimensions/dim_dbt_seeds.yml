@@ -26,3 +26,5 @@ models:
     description: '{{ doc("seed_execution_id") }}'
   - name: alias
     description: '{{ doc("alias") }}'
+  config:
+    group: Cloud Data Analytics

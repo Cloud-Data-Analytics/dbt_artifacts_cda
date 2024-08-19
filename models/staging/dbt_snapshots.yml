@@ -30,3 +30,5 @@ models:
     description: '{{ doc("strategy") }}'
   - name: alias
     description: '{{ doc("alias") }}'
+  config:
+    group: Cloud Data Analytics

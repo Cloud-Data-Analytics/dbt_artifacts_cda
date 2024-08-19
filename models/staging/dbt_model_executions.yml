@@ -40,3 +40,5 @@ models:
         description: '{{ doc("message") }}'
       - name: adapter_response
         description: '{{ doc("adapter_response") }}'
+    config:
+      group: Cloud Data Analytics

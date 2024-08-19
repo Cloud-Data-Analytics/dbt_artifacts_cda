@@ -44,3 +44,5 @@ models:
     description: '{{ doc("run_started_at") }}'
   - name: schema
     description: '{{ doc("schema") }}'
+  config:
+    group: Cloud Data Analytics

@@ -25,5 +25,5 @@ models:
       +schema: "bronze_{{target.name}}"
     facts:
       +schema: "silver_{{target.name}}"
-    dimension:
+    dimensions:
       +schema: "silver_{{target.name}}"      
