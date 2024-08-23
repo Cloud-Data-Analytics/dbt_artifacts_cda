@@ -22,7 +22,8 @@ enhanced as (
         materialization,
         tags,
         meta,
-        alias
+        alias,
+        json_extract_scalar(json_parse(all_results), '$.group') as group_name
     from base
 
 )

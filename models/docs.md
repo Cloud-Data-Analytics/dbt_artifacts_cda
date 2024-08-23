@@ -411,3 +411,9 @@ Resposta fornecida pelo adaptador como JSON.
 Todos os resultados como um blob JSON.
 
 {% enddocs %}
+
+{% docs dbt_group_name %}
+
+Nome do grupo/área que o modelo pertence.
+
+{% enddocs %}
