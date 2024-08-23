@@ -417,3 +417,15 @@ Todos os resultados como um blob JSON.
 Nome do grupo/área que o modelo pertence.
 
 {% enddocs %}
+
+{% docs dbt_columns_list %}
+
+Lista de colunas que o modelo possui. Ordenado alfabeticamente.
+
+{% enddocs %}
+
+{% docs dbt_columns_quantity %}
+
+Quantidade de colunas que o modelo possui.
+
+{% enddocs %}
