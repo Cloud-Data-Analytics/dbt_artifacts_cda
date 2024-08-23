@@ -45,7 +45,7 @@ mid_step as (
 enhanced as (
     select
         *,
-        cardinality(column_lists) as columns_quantity
+        cardinality(columns_list) as columns_quantity
     from mid_step
 )
 
