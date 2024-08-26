@@ -34,5 +34,11 @@ models:
     description: '{{ doc("meta") }}'
   - name: alias
     description: '{{ doc("alias") }}'
+  - name: group_name
+    description: '{{ doc("dbt_group_name") }}'
+  - name: columns_list
+    description: '{{ doc("dbt_columns_list") }}'
+  - name: columns_quantity
+    description: '{{ doc("dbt_columns_quantity") }}'    
   config:
     group: Cloud Data Analytics

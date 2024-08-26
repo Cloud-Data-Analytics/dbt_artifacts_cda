@@ -22,7 +22,10 @@ models as (
         materialization,
         tags,
         meta,
-        alias
+        alias,
+        group_name,
+        columns_list,
+        columns_quantity
     from base
 
 )
