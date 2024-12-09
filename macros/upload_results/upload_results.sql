@@ -23,7 +23,7 @@
                 {% if target.type == 'biquery' %}
                     {% set upload_limit = 50 %}
                 {% elif target.type == 'athena' %}
-                    {% set upload_limit = 30 %}
+                    {% set upload_limit = 10 %}
                 {% else %}
                     {% set upload_limit = 100 %}
                 {% endif %}
