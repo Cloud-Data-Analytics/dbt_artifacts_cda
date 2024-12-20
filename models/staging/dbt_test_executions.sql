@@ -20,6 +20,7 @@ enhanced as (
         total_node_runtime,
         rows_affected,
         failures,
+        message,
         adapter_response
     from base
 
