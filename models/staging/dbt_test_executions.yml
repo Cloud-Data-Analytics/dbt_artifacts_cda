@@ -30,5 +30,7 @@ models:
         description: '{{ doc("was_full_refresh") }}'
       - name: message
         description: '{{ doc("message") }}'
+      - name: adapter_response
+        description: '{{ doc("adapter_response") }}'
     config:
       group: Cloud Data Analytics
