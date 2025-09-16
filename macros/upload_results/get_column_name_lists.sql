@@ -90,6 +90,8 @@
             tags,
             meta,
             alias,
+            group_name,
+            columns_list,
             all_results
         )
 

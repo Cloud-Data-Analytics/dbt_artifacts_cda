@@ -18,6 +18,7 @@ models:
       +materialized: incremental
       +on_schema_change: append_new_columns
       +full_refresh: false
+      +incremental_strategy: append
       +persist_docs:
         # Databricks doesn't offer column-level support for persisting docs
         columns: '{{ target.name != "databricks" }}'
@@ -26,4 +27,4 @@ models:
     facts:
       +schema: "silver_{{target.name}}"
     dimensions:
-      +schema: "silver_{{target.name}}"      
+      +schema: "silver_{{target.name}}"

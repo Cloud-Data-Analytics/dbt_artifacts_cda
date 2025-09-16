@@ -29,14 +29,9 @@ mid_step as (
         tags,
         meta,
         alias,
-        json_extract_scalar(json_parse(all_results), '$.group') as group_name,
+        group_name,
         array_sort(
-            cast(
-                json_parse(
-                    json_query(all_results, 'lax $[*].columns[*].*.name' with array wrapper) 
-                )
-            as array(varchar)
-            )
+            cast(json_parse(columns_list) as array(varchar))
         ) as columns_list
     from base
 

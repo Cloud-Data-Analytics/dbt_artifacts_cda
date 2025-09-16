@@ -153,6 +153,12 @@
                     '{{ tojson(model_copy.tags) }}', {# tags #}
                     '{{ model_copy.config.meta }}', {# meta #}
                     '{{ model_copy.alias }}', {# alias #}
+                    '{{model_copy.group}}', {# group_name #}
+                    {% set names = [] %}
+                    {% for col in model_copy.columns %}
+                        {% set _ = names.append(col) %}
+                    {% endfor %}
+                    '{{ tojson(names) }}', {# columns_list #}
                     {% if var('dbt_artifacts_exclude_all_results', false) %}
                         null
                     {% else %}
